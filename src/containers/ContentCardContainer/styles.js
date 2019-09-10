@@ -5,8 +5,7 @@ export const Container = styled.div`
   margin: 1rem;
   padding: 1rem 3rem;
   border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.1rem 1.7rem 0rem
-    ${props => rgba(props.theme.color.black, 0.5)};
+  box-shadow: 0 4px 12px ${props => rgba(props.theme.color.black, 0.5)};
   width: 100%;
   background-color: ${props => rgba(props.theme.color.black, 0.1)};
 

@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-
 import { ThemeProvider } from 'styled-components';
-import theme from './theme';
 
-import HomePage from './pages/HomePage';
+import App from './pages/App';
+
+import theme from './theme';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <HomePage />
+    <App />
   </ThemeProvider>,
   document.getElementById('root'),
 );
