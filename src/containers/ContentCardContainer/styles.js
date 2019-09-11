@@ -9,6 +9,26 @@ export const Container = styled.div`
   width: 100%;
   background-color: ${props => rgba(props.theme.color.black, 0.1)};
 
+  .content-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .show-code-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: ${props => rgba(props.theme.color.white, 0.7)};
+      }
+    }
+  }
+
   .content-card-section {
     font-size: 1.6rem;
     padding: 1rem 3rem;
@@ -23,6 +43,11 @@ export const Container = styled.div`
 
       padding: 1rem 3rem;
       margin: 1rem;
+    }
+
+    .code-content {
+      max-height: 50rem;
+      overflow-y: auto;
     }
   }
 `;

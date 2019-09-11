@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { rgba } from 'polished';
 
 export const Container = styled.div`
   width: 100%;
@@ -12,11 +11,11 @@ export const Container = styled.div`
     margin: auto;
     font-size: 1.6rem;
 
-    [class^='navbar'] {
-      min-width: 15rem;
-      font-weight: 400;
+    .navbar-link {
+      min-width: 10rem;
+      font-weight: 700;
       color: ${props => props.theme.color.black};
-      padding: 2rem;
+      padding: 1rem;
 
       text-align: center;
       vertical-align: center;
@@ -28,6 +27,7 @@ export const Container = styled.div`
       &:hover {
         cursor: pointer;
         background-color: ${props => props.theme.color.grey};
+        transition: background-color 0.3s;
       }
     }
 
@@ -35,17 +35,28 @@ export const Container = styled.div`
       display: inline-block;
       position: relative;
 
-      .navbar-sublink {
+      .navbar-subcontainer {
         display: none;
+        opacity: 0;
       }
 
-      &:hover .navbar-sublink {
+      &:hover .navbar-subcontainer {
         display: block;
-        margin-top: 2rem;
-        width: 20rem;
+        opacity: 1;
+        margin-top: 1rem;
         left: 0;
         position: absolute;
+        animation: subcontainer-opacity 0.5s;
       }
+    }
+  }
+
+  @keyframes subcontainer-opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 `;
